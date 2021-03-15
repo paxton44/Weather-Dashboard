@@ -9,6 +9,23 @@ var ApiKey = "6954046ca35cd79c3298ba9167dbb29f";
 function getApi(e) {
   e.preventDefault();
   // console.log("click");
+  //moment date for current day and 5 day forecast
+var currentDate = moment().format('L');
+$("#current-date").text(currentDate);
+var date1 = moment().add(1, 'days').format('L');
+var date2 = moment().add(2, 'days').format('L');
+var date3 = moment().add(3, 'days').format('L');
+var date4 = moment().add(4, 'days').format('L');
+var date5 = moment().add(5, 'days').format('L');
+
+console.log(currentDate)
+
+//dates for 5 day forecast
+$("#fDate1").text(date1);
+$("#fDate2").text(date2);
+$("#fDate3").text(date3);
+$("#fDate4").text(date4);
+$("#fDate5").text(date5);
 
   var searchField = $("#searchButton").on("click", getApi)
   var value = $(this).siblings('#search-input').val();
@@ -64,19 +81,29 @@ function getApi(e) {
     })
 }
 
-//moment date for current day and 5 day forecast
-var currentDate = moment().format('L');
-$("#current-date").text(currentDate);
-var date1 = moment().add(1, 'days').format('L');
-var date2 = moment().add(2, 'days').format('L');
-var date3 = moment().add(3, 'days').format('L');
-var date4 = moment().add(4, 'days').format('L');
-var date5 = moment().add(5, 'days').format('L');
-
-console.log(currentDate)
 
 
-//5 day forecast using moment 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //We need to display weather icon, temp, and humidity. 
 
 //Event Listener 
