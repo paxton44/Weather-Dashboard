@@ -4,6 +4,12 @@ console.log("JR full stack developer seeking employment! Contact me on github @p
 //Api key 
 var ApiKey = "6954046ca35cd79c3298ba9167dbb29f";
 
+var citySearched = '';
+
+var citySearchedHistory = [];
+
+
+
 //get api function
 
 function getApi(e) {
@@ -20,21 +26,14 @@ function getApi(e) {
 
   console.log(currentDate)
 
-  //dates for 5 day forecast
-  $("#fDate1").text(date1);
-  $("#fDate2").text(date2);
-  $("#fDate3").text(date3);
-  $("#fDate4").text(date4);
-  $("#fDate5").text(date5);
-
   var searchField = $("#searchButton").on("click", getApi)
   var value = $(this).siblings('#search-input').val();
   // console.log(value);
+  
 
   //Set local storage
   localStorage.setItem(searchField, value);
-  // console.log(localStorage);
-  // console.log("<------------------------->");
+ 
 
   // fetch request used imperial units to convert to usa standards 
   var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + value + '&units=imperial&appid=' + ApiKey;
@@ -54,7 +53,8 @@ function getApi(e) {
       var temp = data.main.temp + " °F"
       var humidity = data.main.humidity + " %"
       var wind = data.wind.speed + " MPH"
-      var weatherImg = 'https://openweathermap.org/img/w/' + data.weather[0].icon + '.png'
+      var weatherImg = 'https://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
+      var uvIndex = data.coord; 
 
 
 
@@ -63,6 +63,7 @@ function getApi(e) {
       console.log(humidity);
       console.log(wind);
       console.log(weatherImg);
+      console.log(uvIndex);
 
 
       //display data from API in HTML using the .text method
@@ -70,13 +71,15 @@ function getApi(e) {
       $("#temperature").text(temp)
       $("#humidity").text(humidity)
       $("#wind-speed").text(wind)
-      $("#current-img").attr(weatherImg);
+      $("#current-img").text(weatherImg);
+      $("#current-img").text(weatherImg);
 
-      //UV index
-      var lon = data.coord.lon
-      var lat = data.coord.lat
-      console.log(lon)
-      console.log(lat)
+      $("#city-search-history").text(currentCityName)
+      
+
+
+    
+    
      
 
     })
