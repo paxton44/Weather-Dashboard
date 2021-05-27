@@ -18,13 +18,29 @@ function getApi(e) {
   //moment date for current day and 5 day forecast
   var currentDate = moment().format('L');
   $("#current-date").text(currentDate);
-  var date1 = moment().add(1, 'days').format('L');
-  var date2 = moment().add(2, 'days').format('L');
-  var date3 = moment().add(3, 'days').format('L');
-  var date4 = moment().add(4, 'days').format('L');
-  var date5 = moment().add(5, 'days').format('L');
 
-  console.log(currentDate)
+  
+  var date1 = moment().add(1, 'days').format('L');
+  console.log(date1);
+  $("#fDate1").text(date1);
+  
+  var date2 = moment().add(2, 'days').format('L');
+  console.log(date1);
+  $("#fDate2").text(date2);
+  
+  var date3 = moment().add(3, 'days').format('L');
+  console.log(date1);
+  $("#fDate3").text(date3);
+  
+  var date4 = moment().add(4, 'days').format('L');
+  console.log(date1);
+  $("#fDate4").text(date4);
+  
+  var date5 = moment().add(5, 'days').format('L');
+  console.log(date5);
+  $("#fDate5").text(date5);
+
+  // console.log(currentDate)
 
   var searchField = $("#searchButton").on("click", getApi)
   var value = $(this).siblings('#search-input').val();
@@ -37,6 +53,9 @@ function getApi(e) {
 
   // fetch request used imperial units to convert to usa standards 
   var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + value + '&units=imperial&appid=' + ApiKey;
+  
+
+  
   // console.log(requestUrl);
 
   fetch(requestUrl)
@@ -45,6 +64,7 @@ function getApi(e) {
     })
     .then(function (data) {
       console.log(data)
+      
 
       //display city name, temperature, humidity, wind speed, and the weather image 
       // not displaying weather image and uv index (lat and lon are now console logging)
@@ -54,7 +74,11 @@ function getApi(e) {
       var humidity = data.main.humidity + " %"
       var wind = data.wind.speed + " MPH"
       var weatherImg = 'https://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
-      var uvIndex = data.coord; 
+      var latLon = data.coord; 
+
+
+
+     
 
 
 
@@ -63,7 +87,8 @@ function getApi(e) {
       console.log(humidity);
       console.log(wind);
       console.log(weatherImg);
-      console.log(uvIndex);
+      console.log(latLon);
+     
 
 
       //display data from API in HTML using the .text method
@@ -73,7 +98,6 @@ function getApi(e) {
       $("#wind-speed").text(wind)
       $("#current-img").text(weatherImg);
       $("#current-img").text(weatherImg);
-
       $("#city-search-history").text(currentCityName)
       
 
