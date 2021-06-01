@@ -121,7 +121,7 @@ function getApi(e) {
         
 
         .then(function (data) {
-          console.log(data);
+          // console.log(data);
 
           //using onecall api instead of deprecated api to handle uvi display 
           var uvIndex = data.daily[0].uvi;
@@ -130,11 +130,11 @@ function getApi(e) {
 
 
           //1 
-          var futureTemp1 = data.daily[1].temp.max
+          var futureTemp1 = data.daily[1].temp.max + " F°"
           $("#futureTemp1").text(futureTemp1)
           // console.log(data.daily[0].temp.max)
 
-          var futureHumidity1 = data.daily[1].humidity
+          var futureHumidity1 = data.daily[1].humidity + " %"
           $("#futureHumidity1").text(futureHumidity1)
           // console.log(data.daily[0].humidity)
           
@@ -143,11 +143,11 @@ function getApi(e) {
           // console.log(futureImage1)
 
           //2          
-          var futureTemp2 = data.daily[2].temp.max
+          var futureTemp2 = data.daily[2].temp.max + " F°"
           $("#futureTemp2").text(futureTemp2)
           // console.log(data.daily[1].temp.max)
 
-          var futureHumidity2 = data.daily[2].humidity
+          var futureHumidity2 = data.daily[2].humidity + " %"
           $("#futureHumidity2").text(futureHumidity2)
           // console.log(data.daily[1].humidity)
 
@@ -157,11 +157,11 @@ function getApi(e) {
 
 
           //3
-          var futureTemp3 = data.daily[3].temp.max
+          var futureTemp3 = data.daily[3].temp.max + " F°"
           $("#futureTemp3").text(futureTemp3)
           // console.log(data.daily[2].temp.max)
 
-          var futureHumidity3 = data.daily[3].humidity
+          var futureHumidity3 = data.daily[3].humidity + " %"
           $("#futureHumidity3").text(futureHumidity3)
           // console.log(data.daily[1].humidity)
 
@@ -171,11 +171,11 @@ function getApi(e) {
 
 
           //4
-          var futureTemp4 = data.daily[4].temp.max
+          var futureTemp4 = data.daily[4].temp.max + " F°"
           $("#futureTemp4").text(futureTemp4)
           // console.log(data.daily[3].temp.max)
 
-          var futureHumidity4 = data.daily[4].humidity
+          var futureHumidity4 = data.daily[4].humidity + " %"
           $("#futureHumidity4").text(futureHumidity4)
           // console.log(data.daily[3].humidity)
 
@@ -185,11 +185,11 @@ function getApi(e) {
 
 
           //5
-          var futureTemp5 = data.daily[5].temp.max
+          var futureTemp5 = data.daily[5].temp.max + " F°"
           $("#futureTemp5").text(futureTemp5)
           // console.log(data.daily[4].temp.max)
 
-          var futureHumidity5 = data.daily[5].humidity
+          var futureHumidity5 = data.daily[5].humidity + " %"
           $("#futureHumidity5").text(futureHumidity5)
           // console.log(data.daily[4].humidity)
 
