@@ -145,10 +145,6 @@ function getApi(e) {
           $("#futureHumidity1").text(futureHumidity1)
           // console.log(data.daily[0].humidity)
           
-          
-          // var  = 'https://openweathermap.org/img/w/' +data.daily[0].weather[0].icon;
-          // $("#fImg1").attr('src', futureImage1);
-          // console.log(data.daily[0].weather[0].icon)
 
           var futureImage1= 'https://openweathermap.org/img/w/' + data.daily[0].weather[0].icon + '.png';
           $("#fImg1").attr('src', futureImage1);
@@ -165,9 +161,9 @@ function getApi(e) {
           // console.log(data.daily[1].humidity)
 
 
-          var futureImage2 = data.daily[1].weather[0].icon;
+          var futureImage2= 'https://openweathermap.org/img/w/' + data.daily[1].weather[0].icon + '.png';
           $("#fImg2").attr('src', futureImage2);
-          console.log(data.daily[1].weather[0].icon)
+          console.log(futureImage1)
 
           //3
           var futureTemp3 = data.daily[2].temp.max
