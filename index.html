@@ -20,6 +20,8 @@
 </head>
 
 <body>
+    <container fluid>
+        
     <!-- Weather Dashboard Title use bootstrap jumbotron or navbar with empty buttons  -->
     <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
@@ -28,6 +30,7 @@
         </div>
     </div>
     <!-- search bar and button from bootstrap  -->
+    
     <div class="container">
         <div class="row">
             <div class="col-sm-4 bg-light">
@@ -56,7 +59,9 @@
                             <h2 id="current-city" id="current-date"></h2>
                             <h3 class="date"> <span id="current-date"></span>
                             </h3>
-                            <h4 class="img" id="current-img" src=""> </h4>
+                            
+                            <!-- <h4 class="img" id="current-img" src=""> </h4> -->
+                           <h4><img class="img" id="current-img" src=""/></h4> 
                             
                         
                         <p>Temperature: <span class="current" id="temperature"></span></p>
@@ -73,40 +78,41 @@
                 <div class="col-sm-12" id="future-weather">
                     <h4>5-Day Forecast</h4>
                     <div class="row text-light">
-                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" id="future-weather1">
+                       
+                        <div class= "col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" id="future-weather1">
                             <p id="fDate1"></p>
-                            <p id="fImg1"></p>
-                            <p>Temperature:<span id="futureTemp1"></span></p>
-                            <p>Humidity:<span id="futureHumidity1"></span></p>
+                            <img id="fImg1" />
+                            <p>Temperature:<p id="futureTemp1"></p></p>
+                            <p>Humidity:<p id="futureHumidity1"></p></p>
                         </div>
-
+              
                         <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" id="future-weather2">
                             <p id="fDate2"></p>
-                            <p id="fImg2"></p>
-                            <p>Temperature:<span id="futureTemp2"></span
+                            <img id="fImg2" />
+                            <p>Temperature:<p id="futureTemp2"></p
                                 ></p>
-                            <p>Humidity:<span id="futureHumidity2"></span></p>
+                            <p>Humidity:<p id="futureHumidity2"></p></p>
                         </div>
 
                         <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" id="future-weather3">
                             <p id="fDate3"></p>
-                            <p id="fImg3"></p>
-                            <p>Temperature:<span id="futureTemp3"></span></p>
-                            <p>Humidity:<span id="futureHumidity3"></span></p>
+                            <img id="fImg3"/>
+                            <p>Temperature:<p id="futureTemp3"></p></p>
+                            <p>Humidity:<p id="futureHumidity3"></p></p>
                         </div>
 
                         <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" id="future-weather4">
                             <p id="fDate4"></p>
-                            <p id="fImg4"></p>
-                            <p>Temperature:<span id="futureTemp4"></span></p>
-                            <p>Humidity:<span id="futureHumidity4"></span></p>
+                            <img id="fImg4"/>
+                            <p>Temperature:<p id="futureTemp4"></p></p>
+                            <p>Humidity:<p id="futureHumidity4"></p></p>
                         </div>
 
                         <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" id="future-weather5">
                             <p id="fDate5"></p>
-                            <p id="fImg5"></p>
-                            <p>Temperature:<span id="futureTemp5"></span></p>
-                            <p>Humidity:<span id="futureHumidity5"></span></p>
+                            <img id="fImg5"/>
+                            <p>Temperature:<p id="futureTemp5"></p></p>
+                            <p>Humidity:<p id="futureHumidity5"></p></p>
                         </div>
                     </div>
                 </div>
@@ -121,7 +127,8 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src=".\Assets\script.js"></script>
-
+</div>
+</container>
 </body>
 
 </html>
