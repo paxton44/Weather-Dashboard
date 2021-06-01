@@ -120,18 +120,13 @@ function getApi(e) {
         })
         
 
-
-
-
-
-
         .then(function (data) {
           console.log(data);
 
-          //using onecall to handle uvi display 
+          //using onecall api instead of deprecated api to handle uvi display 
           var uvIndex = data.daily[0].uvi;
           $("#uv-index").text(uvIndex)
-          console.log(uvIndex)
+          // console.log(uvIndex)
 
 
           //1 
@@ -145,7 +140,7 @@ function getApi(e) {
           
           var futureImage1= 'https://openweathermap.org/img/w/' + data.daily[1].weather[0].icon + '.png';
           $("#fImg1").attr('src', futureImage1);
-          console.log(futureImage1)
+          // console.log(futureImage1)
 
           //2          
           var futureTemp2 = data.daily[2].temp.max
@@ -158,7 +153,7 @@ function getApi(e) {
 
           var futureImage2= 'https://openweathermap.org/img/w/' + data.daily[2].weather[0].icon + '.png';
           $("#fImg2").attr('src', futureImage2);
-          console.log(futureImage2)
+          // console.log(futureImage2)
 
 
           //3
@@ -172,7 +167,7 @@ function getApi(e) {
 
           var futureImage3= 'https://openweathermap.org/img/w/' + data.daily[3].weather[0].icon + '.png';
           $("#fImg3").attr('src', futureImage3);
-          console.log(futureImage3)
+          // console.log(futureImage3)
 
 
           //4
@@ -186,7 +181,7 @@ function getApi(e) {
 
           var futureImage4= 'https://openweathermap.org/img/w/' + data.daily[4].weather[0].icon + '.png';
           $("#fImg4").attr('src', futureImage4);
-          console.log(futureImage4)
+          // console.log(futureImage4)
 
 
           //5
@@ -200,7 +195,7 @@ function getApi(e) {
 
           var futureImage5= 'https://openweathermap.org/img/w/' + data.daily[5].weather[0].icon + '.png';
           $("#fImg5").attr('src', futureImage5);
-          console.log(futureImage5)
+          // console.log(futureImage5)
 
         })
     })
