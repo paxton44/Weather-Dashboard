@@ -146,9 +146,13 @@ function getApi(e) {
           // console.log(data.daily[0].humidity)
           
           
-          var futureImage1 = data.daily[0].weather[0].icon;
+          // var  = 'https://openweathermap.org/img/w/' +data.daily[0].weather[0].icon;
+          // $("#fImg1").attr('src', futureImage1);
+          // console.log(data.daily[0].weather[0].icon)
+
+          var futureImage1= 'https://openweathermap.org/img/w/' + data.daily[0].weather[0].icon + '.png';
           $("#fImg1").attr('src', futureImage1);
-          console.log(data.daily[0].weather[0].icon)
+          console.log(futureImage1)
 
 
           //2          
