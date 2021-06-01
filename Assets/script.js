@@ -69,7 +69,7 @@ function getApi(e) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data)
+      // console.log(data)
 
 
       //display city name, temperature, humidity, wind speed, and the weather image 
@@ -93,7 +93,7 @@ function getApi(e) {
       // console.log(temp);
       // console.log(humidity);
       // console.log(wind);
-      console.log(weatherImg);
+      // console.log(weatherImg);
       // console.log(latLon);
       // console.log(cityId);
 
@@ -107,13 +107,13 @@ function getApi(e) {
       $("#current-img").attr('src', weatherImg);
       $("#city-search-history").text(currentCityName)
 
-      
-
+     
 
 
       //making the lat and lon coords to seperate them for the uvi index
       var lat = data.coord.lat;
       var lon = data.coord.lon;
+      
 
 
       var requestOptions = {
@@ -126,7 +126,7 @@ function getApi(e) {
           'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&units=imperial&exclude=current,minutely,hourly,alerts&appid=1e9dda97d02056dc1ee084b9e12c91ed', 
           requestOptions
         )
-
+        
 
         .then(function (response) {
           return response.json();
@@ -134,6 +134,7 @@ function getApi(e) {
 
 
         .then(function (data) {
+          console.log(data);
           //1 
           var futureTemp1 = data.daily[0].temp.max
           $("#futureTemp1").text(futureTemp1)
@@ -143,7 +144,11 @@ function getApi(e) {
           var futureHumidity1 = data.daily[0].humidity
           $("#futureHumidity1").text(futureHumidity1)
           // console.log(data.daily[0].humidity)
-
+          
+          
+          var futureImage1 = data.daily[0].weather[0].icon;
+          $("#fImg1").attr('src', futureImage1);
+          console.log(data.daily[0].weather[0].icon)
 
 
           //2          
@@ -155,6 +160,11 @@ function getApi(e) {
           $("#futureHumidity2").text(futureHumidity2)
           // console.log(data.daily[1].humidity)
 
+
+          var futureImage2 = data.daily[1].weather[0].icon;
+          $("#fImg2").attr('src', futureImage2);
+          console.log(data.daily[1].weather[0].icon)
+
           //3
           var futureTemp3 = data.daily[2].temp.max
           $("#futureTemp3").text(futureTemp3)
@@ -163,6 +173,10 @@ function getApi(e) {
           var futureHumidity3 = data.daily[3].humidity
           $("#futureHumidity3").text(futureHumidity3)
           // console.log(data.daily[1].humidity)
+
+          var futureImage3 = data.daily[2].weather[0].icon;
+          $("#fImg3").attr('src', futureImage3);
+          console.log(data.daily[2].weather[0].icon)
 
           //4
           var futureTemp4 = data.daily[3].temp.max
@@ -173,6 +187,10 @@ function getApi(e) {
           $("#futureHumidity4").text(futureHumidity4)
           // console.log(data.daily[3].humidity)
 
+          var futureImage4 = data.daily[3].weather[0].icon;
+          $("#fImg4").attr('src', futureImage4);
+          console.log(data.daily[3].weather[0].icon)
+
           //5
           var futureTemp5 = data.daily[4].temp.max
           $("#futureTemp5").text(futureTemp5)
@@ -182,6 +200,9 @@ function getApi(e) {
           $("#futureHumidity5").text(futureHumidity5)
           // console.log(data.daily[4].humidity)
 
+          var futureImage5 = data.daily[4].weather[0].icon;
+          $("#fImg5").attr('src', futureImage5);
+          console.log(data.daily[4].weather[0].icon)
 
 
 
