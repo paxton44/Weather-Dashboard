@@ -2,7 +2,7 @@
 ## Description 
 I created a weather dashboard using Html, CSS, Javascript, Bootstrap and the open weather map api to display any cities current weather and five day forecast. 
 ## Table of Contents
-[Installation](#Installation)
+[Live Link](#LiveLink)
 [Usage](#Usage)
 [License](#License)
 [Contributing](#Contributing)
