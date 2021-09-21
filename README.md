@@ -7,6 +7,7 @@ I created a weather dashboard using Html, CSS, Javascript, Bootstrap and the ope
 [License](#License)
 [Contributing](#Contributing)
 [Questions](#Questions)
+![Site Photo](/public/assets/weatherDashboard.png)
 ## Live Link 
 https://paxton44.github.io/Weather-Dashboard/
 ## Usage 
