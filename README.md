@@ -6,7 +6,6 @@ I created a weather dashboard using Html, CSS, Javascript, Bootstrap and the ope
 [Usage](#Usage)
 [License](#License)
 [Contributing](#Contributing)
-[Tests](#Tests)
 [Questions](#Questions)
 ## Live Link 
 https://paxton44.github.io/Weather-Dashboard/
@@ -17,7 +16,6 @@ Feel free to use and modify!
 ## Contributing 
 Anyone can submit changes via the paxton44 repo on github.
 ## Tests 
-n/a
 ## Questions
 If you have any questions, please contact me directly at mitchflood1@gmail.com 
 Visit my Github [here](https://github.com/paxton44)
