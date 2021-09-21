@@ -1,6 +1,6 @@
 # Weather Dashboard 
 ## Description 
-I created a weather dashboard using the open weather map api to display any cities current weather and five day forecast.  
+I created a weather dashboard using Html, CSS, Javascript, Bootstrap and the open weather map api to display any cities current weather and five day forecast. 
 ## Table of Contents
 [Installation](#Installation)
 [Usage](#Usage)
@@ -8,9 +8,8 @@ I created a weather dashboard using the open weather map api to display any citi
 [Contributing](#Contributing)
 [Tests](#Tests)
 [Questions](#Questions)
-## Installation 
-to install necessary dependencies, run the following command:
-n/a
+## Live Link 
+https://paxton44.github.io/Weather-Dashboard/
 ## Usage 
 Feel free to use and modify!
 ## License 
