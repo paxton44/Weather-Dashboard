@@ -8,15 +8,15 @@ I created a weather dashboard using Html, CSS, Javascript, Bootstrap and the ope
 [Contributing](#Contributing)
 [Questions](#Questions)
 ## Live Link 
-![Site Photo](/assets/weatherDashboard.png)
 https://paxton44.github.io/Weather-Dashboard/
+![Site Photo](/assets/weatherDashboard.png)
 ## Usage 
 Feel free to use and modify!
 ## License 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Contributing 
 Anyone can submit changes via the paxton44 repo on github.
-## Tests 
 ## Questions
 If you have any questions, please contact me directly at mitchflood1@gmail.com 
 Visit my Github [here](https://github.com/paxton44)
+
